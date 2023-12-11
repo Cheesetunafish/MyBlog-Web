@@ -1,6 +1,8 @@
 <component name="libraryTable">
   <library name="java">
-    <CLASSES />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../Javaweb/tomcat/apache-tomcat-9.0.83/lib/servlet-api.jar!/" />
+    </CLASSES>
     <JAVADOC />
     <SOURCES>
       <root url="file://$PROJECT_DIR$/BlogJEE/src/main/java" />
