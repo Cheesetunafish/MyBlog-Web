@@ -1,6 +1,7 @@
 package com.cqupt.model;
 
-import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
+//import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
+import  com.mysql.cj.jdbc.MysqlXADataSource;
 
 import javax.sql.DataSource;
 import java.sql.Connection;
@@ -31,10 +32,10 @@ public class DBUtil {
         if (dataSource == null) {
             synchronized (DBUtil.class) {
                 if (dataSource == null) {
-                    dataSource = new MysqlDataSource();
-                    ((MysqlDataSource) dataSource).setURL(URL);
-                    ((MysqlDataSource) dataSource).setUser(USERNAME);
-                    ((MysqlDataSource) dataSource).setPassword(PASSWORD);
+                    dataSource = new MysqlXADataSource();
+                    ((MysqlXADataSource) dataSource).setURL(URL);
+                    ((MysqlXADataSource) dataSource).setUser(USERNAME);
+                    ((MysqlXADataSource) dataSource).setPassword(PASSWORD);
                 }
             }
         }
