@@ -13,7 +13,6 @@ import javax.servlet.http.HttpServletResponse;
 import com.cqupt.bean.User;
 import com.cqupt.bean.UserLogin;
 
-
 @WebServlet("/LoginServlet")
 public class LoginServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;

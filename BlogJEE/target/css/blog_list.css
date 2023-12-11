@@ -1,0 +1,46 @@
+/* 专门写博客列表页 */
+
+.blog {
+    width: 100%;
+    /* 高度如果不设置，就取决于里面内容高度的总和 */
+    padding: 20px;
+}
+
+.blog .title {
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 10px 0;
+}
+
+.blog .date {
+    text-align: center;
+    color: rgb(18, 141, 18);
+    padding: 10px 0;
+}
+
+.blog .desc {
+    text-indent: 2em;
+}
+
+.blog a {
+    /* 设置成块级元素，方便尺寸和边距 */
+    display: block;
+    width: 140px;
+    height: 40px;
+    margin: 10px auto;
+    border: 2px black solid;
+
+    color: black;
+    line-height: 40px;
+    text-align: center;
+    text-decoration: none;
+
+    /* 如果想让变化柔和一些，可以加个过度 */
+    transition: all 0.5s;
+}
+
+.blog a:hover {
+    background-color: #333;
+    color: #fff;
+}
