@@ -2,10 +2,74 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Blog Find</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>博客列表页</title>
+    <link rel="stylesheet" href="css/blog.css">
+    <link rel="stylesheet" href="css/blog_list.css">
 </head>
 <body>
-<h1>Blogs阿斯顿发额发的发大水发都发</h1>
+<!-- 这是导航栏 -->
+<div class="nav">
+    <!-- 空白元素，用来占位置 -->
+    <div class="spacer"></div>
+    主页
+    写博客
+    注销
+</div>
 
+<div class="container">
+    <!-- 左侧个人信息 -->
+    <div class="left">
+        <!-- 表示整个用户信息区 -->
+        <div class="card">
+            <img src="img/touxiang.jpg" alt="">
+            <h3>Group 8</h3>
+            github 地址
+            <div class="counter">
+                <a href="www.baidu.com"> <span>文章</span></a>
+                <span>分类</span>
+            </div>
+            <div class="counter">
+                <span>2</span>
+                <span>1</span>
+            </div>
+        </div>
+    </div>
+    <!-- 右侧个人信息 -->
+    <div class="right">
+        <!-- .blog就对应一个博客 -->
+        <div class="blog">
+            <!-- 博客标题 -->
+            <div class="title">
+                我的第一篇博客
+            </div>
+            <!-- 博客发布时间 -->
+            <div class="date">
+                2023-02-11 18:26:00
+            </div>
+            <!-- 博客摘要 -->
+            <div class="desc">
+                从今天起，我要认真敲代码. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque exercitationem, ut doloribus blanditiis, eveniet earum culpa accusamus rem eum cum deleniti, quisquam expedita distinctio tempora quaerat adipisci officia esse reprehenderit.
+            </div>
+            查看全文 &gt;
+        </div>
+        <!-- .blog就对应一个博客 -->
+        <div class="blog">
+            <!-- 博客标题 -->
+            <div class="title">
+                我的第一篇博客
+            </div>
+            <!-- 博客发布时间 -->
+            <div class="date">
+                2023-02-11 18:26:00
+            </div>
+            <!-- 博客摘要 -->
+            <div class="desc">
+                从今天起，我要认真敲代码. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque exercitationem, ut doloribus blanditiis, eveniet earum culpa accusamus rem eum cum deleniti, quisquam expedita distinctio tempora quaerat adipisci officia esse reprehenderit.
+            </div>
+            <a href="#">查看全文 &gt;></a>
+        </div>
+    </div>
+</div>
 </body>
-</html>
