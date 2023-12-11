@@ -7,7 +7,7 @@ public class SqlConnect {
     private static final String DBDRIVER = "com.mysql.jdbc.Driver";
     /**
      * 'jdbc:mysql://'：这是 JDBC 连接 MySQL 数据库的协议前缀。
-     * 'localhost'：这是 MySQL 服务器的主机名或 IP 地址，表示数据库服务器在本地。
+     * 'localhost'：这是 ，表示数据库服务器在本地。
      * '3306'：这是 MySQL 服务器的默认端口号。
      * 'mysql'：这是要连接的数据库的名称。
      * '?useUnicode=true&amp;characterEncoding=gbk&useSSL=true'：这是一些连接参数，指定了使用Unicode编码以及字符编码为gbk。
