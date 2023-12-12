@@ -34,7 +34,7 @@
         <div class="card">
             <img src="img/touxiang.jpg" alt="">
             <h3>Group 8</h3>
-            <a href="#">github 地址</a>
+            <a href="https://github.com/Cheesetunafish/MyBlog-Web">github 地址</a>
             <div class="counter">
                 <a href="blog.html">主页</a>
                 <a href="about.html">关于</a>
@@ -76,8 +76,8 @@
 
                 // 如果直接把content设为innerHTML，此时展示在页面上的是原始的markdown字符串
                 // 咱们需要的是渲染后，带格式的效果，所以不用下面方法，
-                // let content = document.querySelector("#content");
-                // content.innerHTML = body.content;
+                //  let content = document.querySelector("#content");
+                //  content.innerHTML = body.content;
 
                 // 第一个参数对应id=content的html标签，渲染后得到的html片段就会被放到这个标签下
                 editormd.markdownToHTML('content',{
@@ -89,8 +89,8 @@
 
     getBlogDetail();
 
-
 /*
+
     //加上一个逻辑，通过GET /login 这个接口来获取当前的登陆状态：
     function getUserInfo(pageName){
         $.ajax({
@@ -159,7 +159,7 @@
         h3.innerHTML = username;
     }
 
- */
+*/
 </script>
 </body>
 </html>

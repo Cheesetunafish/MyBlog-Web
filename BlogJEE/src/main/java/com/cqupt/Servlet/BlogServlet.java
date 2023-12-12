@@ -83,6 +83,6 @@ public class BlogServlet extends HttpServlet {
         BlogDao blogDao = new BlogDao();
         blogDao.insert(blog);
         // 博客提交成功后，跳转（重定向）到博客列表页
-        resp.sendRedirect("blog_list.html");
+        resp.sendRedirect("blog.html");
     }
 }
