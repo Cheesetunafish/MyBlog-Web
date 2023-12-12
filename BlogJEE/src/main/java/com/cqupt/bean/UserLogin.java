@@ -5,7 +5,8 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 
 public class UserLogin {
-    SqlConnect sqlConn = new SqlConnect(); private Connection conn;
+    SqlConnect sqlConn = new SqlConnect();
+    private Connection conn;
     public UserLogin() {
         conn = sqlConn.getConn();
     }
