@@ -27,10 +27,10 @@ private static final String DBPASSWORD = "密码"; //数据库密码
 -- 通过这个文件来编写建库建表的sql
  
 -- 先建立数据库：
-create database if not exists blogSystem;
+create database blogSystem;
  
 -- 选中数据库：
-use mysql;
+use blogsystem;
  
 -- 创建一个博客表：
 drop table if exists blog;
