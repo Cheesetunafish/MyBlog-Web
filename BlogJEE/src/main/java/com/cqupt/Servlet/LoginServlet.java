@@ -1,6 +1,5 @@
 package com.cqupt.Servlet;
 
-/*
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.cqupt.model.Usr;
 import com.cqupt.model.UserDao;
@@ -25,6 +24,8 @@ public class LoginServlet extends HttpServlet {
         //1、获取到请求中的参数
         String username = req.getParameter("username");
         String password = req.getParameter("password");
+        System.out.print("\n获取用户名,username:" + username);
+        System.out.print("\n获取密码,password:" + password + "\n");
         if (username == null || "".equals(username) || password == null || "".equals(password)){
             //请求的内容缺失，肯定是登陆失败！
             resp.setContentType("text/html;charset=utf8");
@@ -74,8 +75,8 @@ public class LoginServlet extends HttpServlet {
         resp.getWriter().write(objectMapper.writeValueAsString(user));
     }
 }
-*/
 
+/*
 import java.io.IOException;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -119,3 +120,5 @@ public class LoginServlet extends HttpServlet {
         doGet(request, response);
     }
 }
+
+ */
