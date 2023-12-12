@@ -3,7 +3,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: 0;
+    box-sizing: border-box;
 }
 
 /* 给整个页面加上背景 */
@@ -108,7 +108,7 @@ body {
 
     text-align: center;
     text-decoration: none;
-    color: #999;
+    color: #363333;
     padding: 10px;
 }
 

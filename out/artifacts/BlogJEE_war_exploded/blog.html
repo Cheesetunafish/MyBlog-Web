@@ -26,47 +26,90 @@
         <div class="card">
             <img src="img/touxiang.jpg" alt="">
             <h3>Group 8</h3>
-            github 地址
+            <a href="#">github 地址</a>
             <div class="counter">
-                <span>主页</span>
-                <span>关于</span>
+                <a href="blog.html">主页</a>
+                <a href="about.html">关于</a>
             </div>
         </div>
     </div>
-    <!-- 右侧个人信息 -->
+    <!-- 右侧内容信息： -->
     <div class="right">
-        <!-- .blog就对应一个博客 -->
-        <div class="blog">
-            <!-- 博客标题 -->
+        <!-- 每一个 .blog都对应着一个博客： -->
+        <!-- <div class="blog">
             <div class="title">
-                我的第一篇博客
+                我的第一篇博客：
             </div>
-            <!-- 博客发布时间 -->
             <div class="date">
-                2023-02-11 18:26:00
+                2022.05.06
             </div>
-            <!-- 博客摘要 -->
             <div class="desc">
-                从今天起，我要认真敲代码. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque exercitationem, ut doloribus blanditiis, eveniet earum culpa accusamus rem eum cum deleniti, quisquam expedita distinctio tempora quaerat adipisci officia esse reprehenderit.
+                从今天起，我要认真敲代码！Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel provident delectus odit exercitationem quis pariatur quia sapiente soluta assumenda consequuntur laboriosam officia repudiandae, placeat quasi, dolores harum eaque nemo officiis.
             </div>
-            查看全文 &gt;
-        </div>
-        <!-- .blog就对应一个博客 -->
-        <div class="blog">
-            <!-- 博客标题 -->
-            <div class="title">
-                我的第一篇博客
-            </div>
-            <!-- 博客发布时间 -->
-            <div class="date">
-                2023-02-11 18:26:00
-            </div>
-            <!-- 博客摘要 -->
-            <div class="desc">
-                从今天起，我要认真敲代码. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque exercitationem, ut doloribus blanditiis, eveniet earum culpa accusamus rem eum cum deleniti, quisquam expedita distinctio tempora quaerat adipisci officia esse reprehenderit.
-            </div>
-            <a href="#">查看全文 &gt;></a>
-        </div>
+            <a href="./blog_detail.html">
+                点击查看全文 &gt;&gt;
+            </a>
+        </div> -->
     </div>
 </div>
+
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script>
+    // 在页面加载的时候，通过ajax给服务器发送数据，获取到博客列表信息，并显示在界面上
+    function getBloglist(){
+        $.ajax({
+            type:'get',
+            url:'blog',
+            success:function(body){
+                // 获取到的body内容就是一个js对象数组，每个元素就是一个js对象
+                // 1、先把 .right 里原有的数据清空
+                let rightDiv = document.querySelector('.right');
+                rightDiv.innerHTML = '';
+                // 2、遍历body，构造出一个个blogDiv
+                for(let blog of body){
+                    let blogDiv = document.createElement('div');
+                    blogDiv.className = 'blog';
+                    // 构造标题的div：
+                    let titleDiv = document.createElement('div');
+                    titleDiv.className = 'title';
+                    titleDiv.innerHTML = blog.title;
+                    blogDiv.appendChild(titleDiv);
+                    // 构造发布时间的div：
+                    let dateDiv = document.createElement('div');
+                    dateDiv.className = 'date';
+                    dateDiv.innerHTML = blog.postTime;
+                    blogDiv.appendChild(dateDiv);
+                    // 构造博客摘要的div：
+                    let descDiv = document.createElement('div');
+                    descDiv.className = 'desc';
+                    descDiv.innerHTML = blog.content;
+                    blogDiv.appendChild(descDiv);
+                    // 构造查看全文：
+                    let a = document.createElement('a');
+                    a.innerHTML = '点击查看全文>>';
+                    // 此处希望点击之后能够跳转到博客详情页，跳转过程需要告知服务器要访问的是哪个博客的详情页：
+                    a.href = 'blog_detail.html?blogId=' + blog.blogId;
+                    blogDiv.appendChild(a);
+
+                    // 最后把blogDiv挂到dom树上：
+                    rightDiv.appendChild(blogDiv);
+                }
+            },
+            error:function(){
+                alert('获取博客列表失败！');
+            }
+        });
+    }
+
+    getBloglist();
+
+</script>
+
+<!-- 在这里引入common.js文件，就可以执行到里面的代码，也就进行了登录状态的检测了 -->
+<!--<script src="js/common.js"></script> -->
+
+<script>
+    getUserInfo('blog_list.html');
+</script>
 </body>
+</html>

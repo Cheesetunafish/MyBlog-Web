@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>博客编辑页</title>
+    <link rel="shortcut icon" href="img/touxiang.jpg"/>
     <link rel="stylesheet" href="css/blog.css">
     <link rel="stylesheet" href="css/blog_edit.css">
     <!-- 引入 editor.md 的依赖 -->
@@ -29,6 +30,7 @@
     <div class="title">
         <input type="text">
         <button>发布文章</button>
+
     </div>
     <!-- 放置 md 编辑器 -->
     <div id="editor">
@@ -46,7 +48,8 @@
 
 
         // 指定 editor.md 依赖的插件路径
-        path: "editor.md/lib/"
+        path: "editor.md/lib/",
+        saveHTMLToTextarea: true
     });
 </script>
 </body>
