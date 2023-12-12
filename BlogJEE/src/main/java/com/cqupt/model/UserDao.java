@@ -30,7 +30,7 @@ public class UserDao {
             //因为此处username使用的是unique约束，所以要么查到的结果为1要么为0，所以用if
             if (resultSet.next()){
                 Usr user = new Usr();
-                user.setUserId(resultSet.getInt("id"));
+                user.setUserId(resultSet.getInt("userId"));
                 user.setUsername(resultSet.getString("username"));
                 user.setPassword(resultSet.getString("password"));
                 return user;
