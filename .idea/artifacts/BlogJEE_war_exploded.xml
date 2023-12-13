@@ -14,7 +14,8 @@
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.14.2" />
         </element>
       </element>
-      <element id="javaee-facet-resources" facet="BlogJEE/web/Web" />
+      <element id="javaee-facet-resources" facet="MyBlog-Web/web/Web" />
+      <element id="artifact" artifact-name="MyBlog-Web:war exploded" />
     </root>
   </artifact>
 </component>
