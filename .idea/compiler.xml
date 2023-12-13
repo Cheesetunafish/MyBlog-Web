@@ -11,13 +11,8 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-<<<<<<< Updated upstream
       <module name="BlogJEE" target="1.8" />
       <module name="MyBlog-Web" target="1.8" />
-=======
-      <module name="BlogJEE (1)" target="1.8" />
-      <module name="BlogJEE (2)" target="1.8" />
->>>>>>> Stashed changes
     </bytecodeTargetLevel>
   </component>
 </project>
