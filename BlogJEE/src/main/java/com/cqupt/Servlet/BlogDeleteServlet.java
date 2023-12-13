@@ -61,6 +61,6 @@ public class BlogDeleteServlet extends HttpServlet {
         blogDao.delete(Integer.parseInt(blogId));
 
         // 6、跳转（重定向）到博客列表页
-        resp.sendRedirect("blog_list.html");
+        resp.sendRedirect("blog.html");
     }
 }

@@ -25,6 +25,6 @@ public class LogoutServlet extends HttpServlet {
         // 然后把这个用户的会话中的信息给删掉就行了
         session.removeAttribute("user");
         // 接来下重定向操作，跳转到登录页面：
-        resp.sendRedirect("blog_login.html");
+        resp.sendRedirect("login.html");
     }
 }
