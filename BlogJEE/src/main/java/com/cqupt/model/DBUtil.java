@@ -21,9 +21,9 @@ public class DBUtil {
      * '?useUnicode=true&amp;characterEncoding=gbk&useSSL=true'：这是一些连接参数，指定了使用Unicode编码以及字符编码为gbk。
      */
     //这是连接数据库的地址
-    private static final String URL = "jdbc:mysql://127.0.0.1:3306/mysql?useUnicode=true&amp;characterEncoding=gbk";
+    private static final String URL = "jdbc:mysql://localhost:3306/mysql?characterEncoding=utf8&useSSL=false";
     private static final String USERNAME = "root"; //数据库用户名
-    private static final String PASSWORD = "asjasjasj"; //数据库密码
+    private static final String PASSWORD = "123456"; //数据库密码
 
 
     //创建一个数据源对象：
